@@ -1,33 +1,32 @@
 //Akhila
 async function isUserLogged() {
   try {
-    const res = await fetch("/getuser");
-    const user = await res.json();
-    if (user.name) {
+    const name = sessionStorage.getItem("email");
+    if (name != "null") {
       let updateSignUp = document.getElementById("signup");
       console.log("element signout", updateSignUp);
       updateSignUp.innerHTML = `Sign out`;
       updateSignUp.href = "../index.html";
       let updateUserName = document.getElementById("signin");
-      updateUserName.innerHTML = `Hi ${user.name}`;
+      updateUserName.innerHTML = `Hi ${name}`;
       // Adding the create button for posts
       let createPosts = document.getElementById("createPosts");
       let logout = document.getElementById("logout");
       if (window.location.pathname === "/postList.html") {
         let btn = document.createElement("button");
+        btn.style.backgroundColor = "transparent";
+        btn.style.border = "none";
+        btn.style.paddingTop = "10px";
         btn.innerHTML = "Add Posts";
         createPosts.appendChild(btn);
-        console.log(window.location);
+
         btn.addEventListener("click", () => {
           //Redirect to create Posts
           window.location.href = "../createPost.html";
         });
       }
       updateSignUp.addEventListener("click", async () => {
-        sessionStorage.setItem("user", null);
-        let res = await fetch("/signout");
-        console.log("signout successfully");
-
+        sessionStorage.setItem("email", null);
       });
       // updateSignUp.addEventListener("click", async () => {
       //   console.log("logout1");

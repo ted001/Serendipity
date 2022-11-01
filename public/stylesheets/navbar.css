@@ -13,7 +13,7 @@
 }
 
 .leftContainer {
-  width: 85%;
+  width: 65%;
 }
 
 .invis {
@@ -22,4 +22,12 @@
 
 .uname {
   width: fit-content;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+.creposts {
+  background-color: transparent;
+}
+>>>>>>> Stashed changes
