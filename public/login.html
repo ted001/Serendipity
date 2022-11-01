@@ -27,61 +27,14 @@
     </div>
 
     <div class="split right">
-      <div class="centered">
-        <div class="mb-2 p-2 rounded visually-hidden" id="loginErrorMsg"></div>
-
-        <div id="input-div">
-          <form id="loginForm" autocomplete="on">
-            <div class="row">
-              <div>
-                <label>Email</label>
-                <input
-                  class="form-control"
-                  id="email"
-                  type="email"
-                  maxlength="64"
-                  name="email"
-                  required
-                />
-                <div id="emailErrorMsg" class="invalid-feedback">
-                  Please input email
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div>
-                <label>Password</label>
-                <input
-                  class="form-control"
-                  id="passwordInput"
-                  type="password"
-                  maxlength="64"
-                  name="password"
-                  required
-                />
-                <div class="invalid-feedback">Please input password</div>
-              </div>
-              <div>
-                <input
-                  class="form-check-input"
-                  id="passwordToggler"
-                  type="checkbox"
-                />
-                Show Password
-              </div>
-            </div>
-            <div class="row mt-2 mb-2">
-              <button
-                type="button"
-                class="btn btn-primary btn-md mt-2"
-                id="loginButton"
-              >
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <form>
+        <label>Email</label>
+        <input class="email" name="email" required="true" />
+        <br />
+        <label>Password</label>
+        <input class="password" name="password" required="true" />
+        <button type="submit">Login</button>
+      </form>
     </div>
     <script type="module" src="./javascripts/util.js"></script>
     <script type="module" src="./javascripts/login.js"></script>
