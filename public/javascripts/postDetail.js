@@ -44,7 +44,7 @@ function PostDetails() {
 
         window.location.replace("/posts");
       });
-      const user = sessionStorage.getItem("user");
+      const user = sessionStorage.getItem("email");
       console.log("user: " + user);
 
       if (user === "null") {

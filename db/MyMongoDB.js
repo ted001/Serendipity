@@ -4,12 +4,7 @@ require("dotenv").config();
 
 function MyMongoDB() {
   const myDB = {};
-<<<<<<< Updated upstream
   const url = "mongodb://localhost:27017" || process.env.DB_URL;
-=======
-  const url =
-    "mongodb+srv://akhila39:Akhila123456@cluster0.uceiksf.mongodb.net/test";
->>>>>>> Stashed changes
   const DB_NAME = "baby-stuff-sharing-db";
 
   myDB.read = async (collectionName, query) => {

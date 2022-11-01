@@ -10,7 +10,7 @@ function CreatePost() {
       event.preventDefault();
       console.log("form submit");
       let formData = new FormData(form);
-      let user = JSON.parse(sessionStorage.getItem("user"));
+      let user = sessionStorage.getItem("email");
 
       formData.append("userEmail", user.email);
       formData.append("createdAt", new Date().getTime());
