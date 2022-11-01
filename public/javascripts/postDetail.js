@@ -47,10 +47,12 @@ function PostDetails() {
       const user = sessionStorage.getItem("user");
       console.log("user: " + user);
 
-      if (user != null) {
-        deleteButton.style.visibility = "visible";
-      } else {
+      if (user === "null") {
+        console.log("user: " + "hidden");
         deleteButton.style.visibility = "hidden";
+      } else {
+        console.log("user: " + "visible");
+        deleteButton.style.visibility = "visible";
       }
 
       //Load image
