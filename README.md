@@ -1,4 +1,4 @@
-#Serendipity – A marketplace for baby Hand-me-downs
+# Serendipity – A marketplace for baby Hand-me-downs
 Serendipity is a web-app built for a community who wants to share or get baby products.
 
 
@@ -19,13 +19,13 @@ A walkthrough of the app is demonstrated by screenshots below
 Landing Page
 ![Landing page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.52.53.png)
 
-Login Page
+### Login Page
 ![Login page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.53.10.png)
 
-Postlist page
+### Postlist page
 ![Postlist page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.55.54.png)
 
-Create post page
+### Create post page
 ![Createpost](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.56.09.png)
 
 To install it clone the repository and run:
