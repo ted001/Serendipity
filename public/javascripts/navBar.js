@@ -2,7 +2,7 @@
 async function isUserLogged() {
   try {
     const name = sessionStorage.getItem("email");
-    if (name != "null") {
+    if (name != "null" && name != null) {
       let updateSignUp = document.getElementById("signup");
       console.log("element signout", updateSignUp);
       updateSignUp.innerHTML = `Sign out`;
