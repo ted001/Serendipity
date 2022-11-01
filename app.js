@@ -32,4 +32,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", pagesRouter);
 app.use("/api/posts", postsRouter);
 
+app.listen(process.env.PORT || 3000, () => {
+  console.log("server is running on port 3000");
+});
+
 module.exports = app;
