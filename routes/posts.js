@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const databaseManager = require("../db/MyMongoDB");
+const { ObjectId } = require("mongodb");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
@@ -22,6 +23,7 @@ const storage = new CloudinaryStorage({
 });
 
 const upload = multer({ storage });
+
 // Read all posts
 router.get("/", async (req, res) => {
   let data;
@@ -37,15 +39,6 @@ router.get("/", async (req, res) => {
 // Create new Post
 router.post("/", upload.array("images"), async (req, res) => {
   let postId = "";
-
-  // const geoData = await geocoder
-  //     .forwardGeocode({
-  //         query: "Yosemite, CA",
-  //         limit: 1,
-  //     })
-  //     .send();
-  // console.log(geoData.body.features[0].geometry.coordinates);
-
   let data = { ...req.body };
 
   data.images = req.files.map((f) => {
@@ -59,6 +52,19 @@ router.post("/", upload.array("images"), async (req, res) => {
   }
   console.log("postId: ", postId.toString());
   res.status(statusCode).send(JSON.stringify({ postId: postId.toString() }));
+});
+
+// Get post with id
+router.get("/:id", async (req, res) => {
+  let data;
+  try {
+    data = await databaseManager.read("posts", {
+      _id: new ObjectId(req.params.id),
+    });
+  } catch (err) {
+    console.log("err", err);
+  }
+  res.json(data);
 });
 
 module.exports = router;

@@ -27,13 +27,26 @@
     </div>
 
     <div class="split right">
-      <form>
-        <label>Email</label>
-        <input class="email" name="email" required="true" />
-        <br />
-        <label>Password</label>
-        <input class="password" name="password" required="true" />
-        <button type="submit">Login</button>
+      <form action="/login" method="post">
+        <div class="logincontainer">
+          <div class="Loginform">
+            <input
+              class="email"
+              name="email"
+              placeholder="email"
+              required="true"
+            />
+            <br />
+            <input
+              class="password"
+              type="password"
+              name="password"
+              placeholder="password"
+              required="true"
+            />
+            <button type="submit" class="signbutton">Login</button>
+          </div>
+        </div>
       </form>
     </div>
     <script type="module" src="./javascripts/util.js"></script>
