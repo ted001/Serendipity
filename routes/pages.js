@@ -35,21 +35,13 @@ router.post("/signup", async (req, res) => {
   res.status(200).redirect("./login.html");
 });
 
-// router.get("/getUser", async (req, res) => {
-//   req
-//   let resp = await databaseManager.read("users", {
-//     email: "",
-//   });
-//   let userName = resp[0]?.FirstName;
-//   res.json({ name: userName });
-// });
-
 router.get("/signout", async (req, res) => {
   res.status(200);
 
   res.redirect("/");
 });
 
+//Jin
 // Get post with id
 router.get("/posts/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/postDetail.html"));
