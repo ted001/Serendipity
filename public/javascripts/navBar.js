@@ -24,6 +24,7 @@ async function isUserLogged() {
         });
       }
       updateSignUp.addEventListener("click", async () => {
+        sessionStorage.setItem("user", null);
         let res = await fetch("/signout");
         console.log("signout successfully");
       });
