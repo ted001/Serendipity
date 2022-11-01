@@ -12,7 +12,7 @@ The app maintains collections for Users and post.
 
 A walkthrough of the app is demonstrated by screenshots below
 Landing Page
-![Landing page](http://url/to/img.png)
+![Landing page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.52.53.png)
 
 Login Page
 
