@@ -5,8 +5,8 @@ require("dotenv").config();
 function MyMongoDB() {
   const myDB = {};
   const url = "mongodb://localhost:27017" || process.env.DB_URL;
-
   const DB_NAME = "baby-stuff-sharing-db";
+  const COLLECTION_NAME_USER = "users";
 
   myDB.read = async (collectionName, query) => {
     let client;
@@ -58,6 +58,35 @@ function MyMongoDB() {
     return data._id;
   };
 
+  //User collections - Akhila
+  myDB.auth = async (data) => {
+    let client = new MongoClient(url);
+    await client.connect();
+    let db = client.db(DB_NAME);
+    let usersCol = db.collection(COLLECTION_NAME_USER);
+    console.log(data.email);
+    let res = await usersCol.findOne({ email: data.email });
+    if (res.password === data.password) {
+      console.log("authenticated");
+      return true;
+    }
+    return false;
+  };
+
+  myDB.insertuser = async (data) => {
+    let client = new MongoClient(url);
+    await client.connect();
+    let db = client.db(DB_NAME);
+    let usersCol = db.collection(COLLECTION_NAME_USER);
+    console.log(data.email);
+    let res = await usersCol.insertOne({
+      email: data.email,
+      FirstName: data.fname,
+      LastName: data.lname,
+    });
+    console.log("created user");
+    return true;
+  };
   return myDB;
 }
 
