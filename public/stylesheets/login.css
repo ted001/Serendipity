@@ -1,0 +1,71 @@
+/* File by Akhila */
+body {
+  background-color: #eef1ff;
+  height: 100%;
+}
+
+.split {
+  height: 80%;
+  width: 45%;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  background-color: #b1b2ff;
+  border-inline-style: solid;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.loginphoto {
+  max-width: 2000px;
+  max-height: 2000px;
+}
+
+.logininfo {
+  width: 500px;
+  height: 600px;
+  background-color: #d2daff;
+  border-style: solid;
+}
+
+.inputs {
+  width: 300px;
+}
+
+.inputboxes {
+  padding: 20px;
+  padding-top: 60px;
+}
+
+.signbutton {
+  background-color: #929ed9;
+  width: 60px;
+  height: 50px;
+  align-items: center;
+}
+
+.passpad {
+  padding-top: 25px;
+}
+
+.logodisplay {
+  padding-left: 5px;
+  width: 60px;
+  height: 60px;
+}
