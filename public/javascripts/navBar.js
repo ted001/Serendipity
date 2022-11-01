@@ -23,15 +23,11 @@ async function isUserLogged() {
           window.location.href = "../createPost.html";
         });
       }
-      let lobtn = document.createElement("button");
-      lobtn.innerHTML = "Log out";
-      createPosts.appendChild(lobtn);
-      lobtn.addEventListener("click", async () => {
-        // //Redirect to create Posts
-        // window.location.href = "../createPost.html";
-        console.log("clicking logout");
-        window.location.href = "../index.html";
-        const res = await fetch("/signout");
+      updateSignUp.addEventListener("click", async () => {
+        sessionStorage.setItem("user", null);
+        let res = await fetch("/signout");
+        console.log("signout successfully");
+
       });
       // updateSignUp.addEventListener("click", async () => {
       //   console.log("logout1");

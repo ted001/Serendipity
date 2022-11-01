@@ -33,7 +33,7 @@ router.post("/login", async (req, res) => {
 router.post("/signup", async (req, res) => {
   const user = req.body;
   console.log("in routes", user.email);
-  if (await databaseManager.insertuser(user)) {
+  if (await databaseManager.insertuser("users", user)) {
     console.log("welcome");
   }
   res.status(200).redirect("./login.html");
@@ -55,7 +55,6 @@ router.get("/signout", async (req, res) => {
   res.redirect("/");
 });
 
-// By Zhiyi Jin
 // Get post with id
 router.get("/posts/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/postDetail.html"));

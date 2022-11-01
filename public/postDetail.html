@@ -14,13 +14,20 @@
     />
     <!--PostDetail style-->
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/postDetail.css" />
   </head>
   <body>
     <div id="page-container">
       <div id="content-wrap">
         <div class="container mb-5">
           <h1 id="title" class="mb-3 headers">Post Details</h1>
-          <button id="deleteButton" class="btn btn-danger">Delete post</button>
+          <button
+            id="deleteButton"
+            style="visibility: hidden"
+            class="btn btn-danger"
+          >
+            Delete post
+          </button>
           <hr />
           <div class="row mb-5">
             <div class="col-lg-8 col-xs-12">
@@ -29,12 +36,7 @@
           </div>
           <div class="row mb-5">
             <label> Description </label>
-            <div id="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab
-              similique eius. Maxime fuga tempore eum perferendis ipsum
-              temporibus consectetur molestias molestiae voluptate, voluptatem
-              incidunt maiores! Expedita ipsum porro non.
-            </div>
+            <div id="description"></div>
           </div>
           <div class="row mb-5">
             <label> Address </label>
@@ -42,7 +44,7 @@
               1600 Amphitheatre Parkway Mountain View, CA 94043
             </div>
           </div>
-          <div id="createdAt">Published: time###</div>
+          <div id="createdAt">Published</div>
         </div>
       </div>
 

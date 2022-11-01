@@ -1,11 +1,10 @@
-// By Zhiyi Jin
+// By Zhiyi Jin & Akhila
 const { MongoClient, ObjectId } = require("mongodb");
 require("dotenv").config();
 
 function MyMongoDB() {
   const myDB = {};
-  const url =
-    "mongodb+srv://akhila39:Akhila123456@cluster0.uceiksf.mongodb.net/test";
+  const url = "mongodb://localhost:27017" || process.env.DB_URL;
   const DB_NAME = "baby-stuff-sharing-db";
   const COLLECTION_NAME_USER = "users";
 
@@ -79,11 +78,11 @@ function MyMongoDB() {
     return false;
   };
 
-  myDB.insertuser = async (data) => {
+  myDB.insertuser = async (collectionName, data) => {
     let client = new MongoClient(url);
     await client.connect();
     let db = client.db(DB_NAME);
-    let usersCol = db.collection(COLLECTION_NAME_USER);
+    let usersCol = db.collection(collectionName);
     console.log(data.email);
     let res = await usersCol.insertOne({
       email: data.email,

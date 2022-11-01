@@ -17,7 +17,7 @@ function PostDetails() {
     return formatDate;
   }
 
-  // code from trashare
+  // some code from trashare
   // https://github.com/fcchung/trashare
   post.show = async () => {
     const posts = await fetch("/api/posts/" + id);
@@ -44,9 +44,14 @@ function PostDetails() {
 
         window.location.replace("/posts");
       });
-      const user = JSON.parse(sessionStorage.getItem("user"));
+      const user = sessionStorage.getItem("user");
+      console.log("user: " + user);
 
-      if (user && user.email == data.userEmail) {
+      if (user === "null") {
+        console.log("user: " + "hidden");
+        deleteButton.style.visibility = "hidden";
+      } else {
+        console.log("user: " + "visible");
         deleteButton.style.visibility = "visible";
       }
 
