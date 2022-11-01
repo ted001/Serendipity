@@ -22,7 +22,7 @@ router.post("/login", async (req, res) => {
   req.session.email = user.email;
 
   console.log("in routes", req.session.user);
-  if (await databaseManager.auth(user)) {
+  if (await databaseManager.auth("users", user)) {
     console.log("welcome old user");
     res.status(200).redirect("./postList.html");
   } else {
@@ -39,10 +39,20 @@ router.post("/signup", async (req, res) => {
   res.status(200).redirect("./login.html");
 });
 
-router.get("/getUser", (req, res) => {
+router.get("/getUser", async (req, res) => {
   console.log("in get", req.session.email);
-  res.json({ email: req.session.email });
+  let resp = await databaseManager.read("users", {
+    email: req.session.email,
+  });
+  let userName = resp[0]?.FirstName;
+  res.json({ name: userName });
 });
+
+router.get("/signout", async (req, res) => {
+  req.session.destroy();
+  res.status(200);
+});
+
 // By Zhiyi Jin
 // Get post with id
 router.get("/posts/:id", (req, res) => {

@@ -11,24 +11,30 @@ h1 {
 
 .containercolor {
   /* padding-left: 300px; */
-  left: 520px;
+  left: 600px;
   top: 150px;
   background-color: #d2daff;
   align-items: center;
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
 }
 
 .containerposition {
+  align-items: center;
   padding-left: 500px;
 }
 
 .inputfields {
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .fname .lname .email .password {
-  width: 200px;
+  background-color: tomato;
+  width: 150px;
   height: 50px;
+}
+
+.incontainer {
+  padding: 60px;
 }

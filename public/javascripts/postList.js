@@ -50,20 +50,5 @@ function MyPostList() {
   return postList;
 }
 
-//Akhila
-async function isUserLogged() {
-  const res = await fetch("/getuser");
-  const user = await res.json();
-  console.log("In pd.js", user);
-  if (user.email) {
-    let updateSignUp = document.getElementById("#signup");
-    console.log(updateSignUp);
-    updateSignUp.innerHTML = `Sign out`;
-    updateSignUp.href = "#";
-  } else {
-    alert("Not logged in");
-  }
-}
-isUserLogged();
 const postlist = MyPostList();
 postlist.getPosts();
