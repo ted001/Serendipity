@@ -5,7 +5,7 @@ function PostDetails() {
   const id = url.substring(url.lastIndexOf("/") + 1);
   const post = {};
 
-  // calculate the time past after the post is created
+  // get date
   function getDate(createdTime) {
     let date = new Date(parseInt(createdTime));
 
