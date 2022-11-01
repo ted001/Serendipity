@@ -30,23 +30,23 @@ function PostDetails() {
       const description = document.querySelector("#description");
       const createdAt = document.querySelector("#createdAt");
       const deleteButton = document.getElementById("deleteButton");
-      const siteTitle = document.querySelector("title");
+      const address = document.getElementById("address");
 
       title.innerHTML = data.title;
-      siteTitle.innerHTML = "Serendipity: " + data.title;
       description.innerHTML = data.description;
       createdAt.innerHTML = "Published: " + getDate(data.createdAt);
+      address.innerHTML = data.address;
 
+      deleteButton.addEventListener("click", async () => {
+        await fetch("/api/posts/" + id, {
+          method: "delete",
+        });
+
+        window.location.replace("/posts");
+      });
       const user = JSON.parse(sessionStorage.getItem("user"));
 
       if (user && user.email == data.userEmail) {
-        deleteButton.addEventListener("submit", async (event) => {
-          await fetch("/api/posts/" + id, {
-            method: "delete",
-          });
-
-          window.location.replace("/posts");
-        });
         deleteButton.style.visibility = "visible";
       }
 

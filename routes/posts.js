@@ -67,4 +67,14 @@ router.get("/:id", async (req, res) => {
   res.json(data);
 });
 
+// Delete post with id
+router.delete("/:id", async (req, res) => {
+  console.log("delete" + req.params.id);
+  await databaseManager.delete("posts", {
+    _id: new ObjectId(req.params.id),
+  });
+
+  res.send(`Deleting post with id: ${req.params.id}`);
+});
+
 module.exports = router;

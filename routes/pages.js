@@ -1,9 +1,8 @@
 const express = require("express");
-// const { url } = require("inspector");
 const router = express.Router();
-// const path = require("path");
+const path = require("path");
 const databaseManager = require("../db/MyMongoDB");
-const bodyparser = require("body-parser");
+
 // By Zhiyi Jin
 // Get all posts page
 router.get("/posts", (req, res) => {
@@ -15,9 +14,8 @@ router.get("/posts", (req, res) => {
 router.get("/createpost", (req, res) => {
   res.redirect("createPost.html");
 });
-//Akhila
-// const bodyParser = bodyparser.json();
 
+//Akhila
 router.post("/login", async (req, res) => {
   const user = req.body;
   console.log("in routes", user.email);
