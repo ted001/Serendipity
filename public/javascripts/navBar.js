@@ -12,7 +12,7 @@ async function isUserLogged() {
       updateUserName.innerHTML = `Hi ${user.name}`;
       // Adding the create button for posts
       let createPosts = document.getElementById("createPosts");
-
+      let logout = document.getElementById("logout");
       if (window.location.pathname === "/postList.html") {
         let btn = document.createElement("button");
         btn.innerHTML = "Add Posts";
@@ -27,7 +27,13 @@ async function isUserLogged() {
         sessionStorage.setItem("user", null);
         let res = await fetch("/signout");
         console.log("signout successfully");
+
       });
+      // updateSignUp.addEventListener("click", async () => {
+      //   console.log("logout1");
+
+      //   console.log("signout successfully");
+      // });
     }
   } catch (err) {
     console.log(err);

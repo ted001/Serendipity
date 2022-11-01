@@ -6,6 +6,7 @@ function MyMongoDB() {
   const myDB = {};
   const url = "mongodb://localhost:27017" || process.env.DB_URL;
   const DB_NAME = "baby-stuff-sharing-db";
+  const COLLECTION_NAME_USER = "users";
 
   myDB.read = async (collectionName, query) => {
     let client;
