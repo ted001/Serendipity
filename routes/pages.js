@@ -1,19 +1,21 @@
-// By Zhiyi Jin
 const express = require("express");
-// const { url } = require("inspector");
 const router = express.Router();
-// const path = require("path");
+const path = require("path");
 const databaseManager = require("../db/MyMongoDB");
-const bodyparser = require("body-parser");
+
 // By Zhiyi Jin
 // Get all posts page
 router.get("/posts", (req, res) => {
   res.redirect("postList.html");
 });
 
-//Akhila
-// const bodyParser = bodyparser.json();
+// By Zhiyi Jin
+// Create posts page
+router.get("/createpost", (req, res) => {
+  res.redirect("createPost.html");
+});
 
+//Akhila
 router.post("/login", async (req, res) => {
   const user = req.body;
   console.log("user", user.email);
@@ -37,9 +39,15 @@ router.post("/signup", async (req, res) => {
   res.status(200).redirect("./login.html");
 });
 
+
 router.get("/getUser", (req, res) => {
   console.log("in get", req.session.email);
   res.json({ email: req.session.email });
+
+// By Zhiyi Jin
+// Get post with id
+router.get("/posts/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/postDetail.html"));
 });
 
 module.exports = router;
