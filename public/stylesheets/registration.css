@@ -1,0 +1,34 @@
+body {
+  background-image: url("../images/registration.jpeg");
+}
+
+h1 {
+  text-align: center;
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+}
+
+.containercolor {
+  /* padding-left: 300px; */
+  left: 520px;
+  top: 150px;
+  background-color: #d2daff;
+  align-items: center;
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+
+.containerposition {
+  padding-left: 500px;
+}
+
+.inputfields {
+  padding: 20px;
+}
+
+.fname .lname .email .password {
+  width: 200px;
+  height: 50px;
+}
