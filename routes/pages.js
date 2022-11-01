@@ -18,8 +18,9 @@ router.post("/login", async (req, res) => {
   const user = req.body;
   console.log("in routes", user.email);
   if (await databaseManager.auth(user)) {
-    console.log("welcome");
+    console.log("welcome old user");
   }
+  res.status(200).redirect("./postList.html");
 });
 
 router.post("/signup", async (req, res) => {
@@ -28,6 +29,7 @@ router.post("/signup", async (req, res) => {
   if (await databaseManager.insertuser(user)) {
     console.log("welcome");
   }
+  res.status(200).redirect("./login.html");
 });
 
 module.exports = router;
