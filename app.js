@@ -12,7 +12,7 @@ const pagesRouter = require("./routes/pages");
 const usersRouter = require("./routes/users");
 
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
 app.use(session({ secret: "abc", cookie: {} }));
 app.use(bodyParser.json());
 app.use(

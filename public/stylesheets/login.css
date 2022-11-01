@@ -59,9 +59,8 @@ h5 {
 }
 
 .signbutton {
-  background-color: #929ed9;
-  width: 60px;
-  height: 50px;
+  /* background-color: #929ed9; */
+
   align-items: center;
 }
 
@@ -80,7 +79,11 @@ h5 {
 }
 
 .logincontainer {
-  align-content: center;
+  position: relative;
+  top: 30%;
+  left: 30%;
+  right: 30%;
+  width: 200px;
 }
 
 .logo {
@@ -90,4 +93,9 @@ h5 {
 }
 .buttons {
   padding-top: 25px;
+  padding-left: 50px;
+}
+
+.inpufields {
+  /* width: 50px; */
 }

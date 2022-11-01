@@ -34,31 +34,30 @@
       <div class="logincontainer">
         <label class="displayhead">Log in to view and share</label>
         <div class="Loginform">
-          <form action="/login" method="POST">
-            <div class="row">
-              <div>
-                <input
-                  class="email"
-                  type="email"
-                  name="email"
-                  required="true"
-                  placeholder="email"
-                />
-              </div>
+          <form id="formdiv">
+            <div class="inpufields">
+              <input
+                class="email form-control"
+                type="email"
+                name="email"
+                required="true"
+                placeholder="email"
+              />
             </div>
-            <div class="row">
-              <div class="passpad">
-                <input
-                  class="password"
-                  type="password"
-                  name="password"
-                  required="true"
-                  placeholder="password"
-                />
-              </div>
+
+            <div class="passpad">
+              <input
+                class="password form-control"
+                type="password"
+                name="password"
+                required="true"
+                placeholder="password"
+              />
             </div>
             <div class="buttons">
-              <button type="submit" class="signbutton">Login</button>
+              <button type="submit" class="btn-primary btn-lg signbutton">
+                Login
+              </button>
             </div>
           </form>
         </div>
