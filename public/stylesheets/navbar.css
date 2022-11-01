@@ -15,3 +15,11 @@ img {
 .leftContainer {
   width: 1200px;
 }
+
+.invis {
+  padding: 20px;
+}
+
+.uname {
+  width: fit-content;
+}

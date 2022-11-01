@@ -5,36 +5,44 @@ body {
 h1 {
   text-align: center;
   font-family: "Sofia", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   text-shadow: 3px 3px 3px #ababab;
 }
 
 .containercolor {
   /* padding-left: 300px; */
-  left: 600px;
-  top: 150px;
+  left: 535px;
+  top: 190px;
   background-color: #d2daff;
   align-items: center;
-  position: relative;
-  width: 350px;
-  height: 350px;
+  position: fixed;
+  width: 380px;
+  height: 380px;
+  opacity: 0.9;
 }
 
 .containerposition {
-  align-items: center;
-  padding-left: 500px;
+  width: 300px;
+  padding-left: 600px;
 }
 
 .inputfields {
+  width: 500px;
+  padding-left: 40px;
   padding-bottom: 20px;
-}
-
-.fname .lname .email .password {
-  background-color: tomato;
-  width: 150px;
-  height: 50px;
+  align-items: center;
 }
 
 .incontainer {
+  padding-top: 15px;
   padding: 60px;
+}
+
+.logo {
+  padding-left: 20px;
+  width: 75px;
+  height: 75px;
+}
+.regbutton {
+  background-color: #929ed9;
 }

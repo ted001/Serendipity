@@ -51,6 +51,8 @@ router.get("/getUser", async (req, res) => {
 router.get("/signout", async (req, res) => {
   req.session.destroy();
   res.status(200);
+
+  res.redirect("/");
 });
 
 // By Zhiyi Jin

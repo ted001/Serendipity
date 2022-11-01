@@ -15,9 +15,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="./stylesheets/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
   </head>
   <body>
-    <div class="split left">
+    <!-- <div class="split left">
       <a href="./index.html"
         ><img class="logodisplay" src="./images/logo.png" alt="Logo"
       /></a>
@@ -27,7 +31,9 @@
     </div>
 
     <div class="split right">
-      <form action="/login" method="POST">
+      <h1>Login to view and share</h1>
+      <div class="centered"> -->
+    <!-- <form action="/login" method="POST">
         <div class="logincontainer">
           <div class="Loginform">
             <input
@@ -48,7 +54,49 @@
           </div>
         </div>
         <div class="errormsg"></div>
-      </form>
+      </form> -->
+    <div class="split left">
+      <a href="/"
+        ><img class="logo" src="./images/logo.png" alt="Serendipity logo"
+      /></a>
+      <div class="centered">
+        <img class="loginphoto" src="./images/login.jpg" alt="Baby photo" />
+      </div>
+    </div>
+
+    <div class="split right">
+      <h5>Log in to view and share</h5>
+      <div class="centered">
+        <div id="input-div">
+          <form action="/login" method="POST">
+            <div class="row">
+              <div>
+                <input
+                  class="email"
+                  type="email"
+                  name="email"
+                  required="true"
+                  placeholder="email"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="passpad">
+                <input
+                  class="password"
+                  type="password"
+                  name="password"
+                  required="true"
+                  placeholder="password"
+                />
+              </div>
+            </div>
+            <div class="buttons">
+              <button type="submit" class="signbutton">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
   <script src="./javascripts/login.js"></script>

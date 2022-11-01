@@ -12,7 +12,7 @@ async function isUserLogged() {
       updateUserName.innerHTML = `Hi ${user.name}`;
       // Adding the create button for posts
       let createPosts = document.getElementById("createPosts");
-
+      let logout = document.getElementById("logout");
       if (window.location.pathname === "/postList.html") {
         let btn = document.createElement("button");
         btn.innerHTML = "Add Posts";
@@ -23,10 +23,21 @@ async function isUserLogged() {
           window.location.href = "../createPost.html";
         });
       }
-      updateSignUp.addEventListener("click", async () => {
-        let res = await fetch("/signout");
-        console.log("signout successfully");
+      let lobtn = document.createElement("button");
+      lobtn.innerHTML = "Log out";
+      createPosts.appendChild(lobtn);
+      lobtn.addEventListener("click", async () => {
+        // //Redirect to create Posts
+        // window.location.href = "../createPost.html";
+        console.log("clicking logout");
+        window.location.href = "../index.html";
+        const res = await fetch("/signout");
       });
+      // updateSignUp.addEventListener("click", async () => {
+      //   console.log("logout1");
+
+      //   console.log("signout successfully");
+      // });
     }
   } catch (err) {
     console.log(err);
