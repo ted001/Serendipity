@@ -4,7 +4,8 @@ require("dotenv").config();
 
 function MyMongoDB() {
   const myDB = {};
-  const url = "mongodb+srv://admin-ted:Test123@cluster0.dz0wqq8.mongodb.net/";
+  const url = "mongodb://localhost:27017" || process.env.DB_URL;
+
   const DB_NAME = "baby-stuff-sharing-db";
 
   myDB.read = async (collectionName, query) => {
