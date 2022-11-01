@@ -68,7 +68,7 @@ function MyMongoDB() {
     try {
       let res = await usersCol.findOne({ email: data.email });
       console.log("password", res.password, " data ", data.password);
-      if (res.password === data.password) {
+      if (res?.password === data.password) {
         console.log("authenticated");
         return true;
       }

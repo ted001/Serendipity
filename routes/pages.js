@@ -26,7 +26,9 @@ router.post("/login", async (req, res) => {
     console.log("welcome old user");
     res.status(200).redirect("./postList.html");
   } else {
-    console.log("Wrong password");
+    res
+      .send(`<script>alert('Wrong username or password')</script>`)
+      .redirect("./login.html");
   }
 });
 
