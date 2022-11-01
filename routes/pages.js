@@ -39,11 +39,10 @@ router.post("/signup", async (req, res) => {
   res.status(200).redirect("./login.html");
 });
 
-
 router.get("/getUser", (req, res) => {
   console.log("in get", req.session.email);
   res.json({ email: req.session.email });
-
+});
 // By Zhiyi Jin
 // Get post with id
 router.get("/posts/:id", (req, res) => {
