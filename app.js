@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const session = require("express-session");
+const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const postsRouter = require("./routes/posts");
@@ -11,6 +13,13 @@ const usersRouter = require("./routes/users");
 
 const app = express();
 
+app.use(session({ secret: "abc", cookie: { maxAge: 60000 } }));
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

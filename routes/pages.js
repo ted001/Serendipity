@@ -18,11 +18,16 @@ router.get("/createpost", (req, res) => {
 //Akhila
 router.post("/login", async (req, res) => {
   const user = req.body;
-  console.log("in routes", user.email);
+  console.log("user", user.email);
+  req.session.email = user.email;
+
+  console.log("in routes", req.session.user);
   if (await databaseManager.auth(user)) {
     console.log("welcome old user");
+    res.status(200).redirect("./postList.html");
+  } else {
+    console.log("Wrong password");
   }
-  res.status(200).redirect("./postList.html");
 });
 
 router.post("/signup", async (req, res) => {
@@ -33,6 +38,11 @@ router.post("/signup", async (req, res) => {
   }
   res.status(200).redirect("./login.html");
 });
+
+
+router.get("/getUser", (req, res) => {
+  console.log("in get", req.session.email);
+  res.json({ email: req.session.email });
 
 // By Zhiyi Jin
 // Get post with id

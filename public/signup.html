@@ -5,38 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./stylesheets/registration.css"
+    />
   </head>
   <body>
-    <form action="/signup" method="post">
-      <input
-        class="fname"
-        type="text"
-        name="fname"
-        required="true"
-        placeholder="FirstName"
-      />
-      <input
-        class="lname"
-        type="text"
-        name="lname"
-        required="true"
-        placeholder="LastName"
-      />
-      <input
-        class="email"
-        type="email"
-        name="email"
-        required="true"
-        placeholder="Email"
-      />
-      <input
-        class="passwprd"
-        type="password"
-        name="password"
-        required="true"
-        placeholder="password"
-      />
-      <button type="submit">Register</button>
-    </form>
+    <div class="containercolor">
+      <form action="/signup" method="post">
+        <div class="inputfields">
+          <input
+            class="fname"
+            type="text"
+            name="fname"
+            required="true"
+            placeholder="FirstName"
+          />
+        </div>
+        <div class="inputfields">
+          <input
+            class="lname"
+            type="text"
+            name="lname"
+            required="true"
+            placeholder="LastName"
+          />
+        </div>
+        <div class="inputfields">
+          <input
+            class="email"
+            type="email"
+            name="email"
+            required="true"
+            placeholder="Email"
+          />
+        </div>
+        <div class="inputfields">
+          <input
+            class="password"
+            type="password"
+            name="password"
+            required="true"
+            placeholder="password"
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
   </body>
 </html>
