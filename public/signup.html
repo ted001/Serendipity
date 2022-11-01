@@ -10,47 +10,54 @@
       type="text/css"
       href="./stylesheets/registration.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
   </head>
   <body>
     <div class="containercolor">
+      <h1>Create account</h1>
       <form action="/signup" method="post">
-        <div class="inputfields">
-          <input
-            class="fname"
-            type="text"
-            name="fname"
-            required="true"
-            placeholder="FirstName"
-          />
+        <div class="incontainer">
+          <div class="inputfields">
+            <input
+              class="fname"
+              type="text"
+              name="fname"
+              required="true"
+              placeholder="FirstName"
+            />
+          </div>
+          <div class="inputfields">
+            <input
+              class="lname"
+              type="text"
+              name="lname"
+              required="true"
+              placeholder="LastName"
+            />
+          </div>
+          <div class="inputfields">
+            <input
+              class="email"
+              type="email"
+              name="email"
+              required="true"
+              placeholder="Email"
+            />
+          </div>
+          <div class="inputfields">
+            <input
+              class="password"
+              type="password"
+              name="password"
+              required="true"
+              placeholder="password"
+            />
+          </div>
+          <button type="submit">Register</button>
         </div>
-        <div class="inputfields">
-          <input
-            class="lname"
-            type="text"
-            name="lname"
-            required="true"
-            placeholder="LastName"
-          />
-        </div>
-        <div class="inputfields">
-          <input
-            class="email"
-            type="email"
-            name="email"
-            required="true"
-            placeholder="Email"
-          />
-        </div>
-        <div class="inputfields">
-          <input
-            class="password"
-            type="password"
-            name="password"
-            required="true"
-            placeholder="password"
-          />
-        </div>
-        <button type="submit">Register</button>
       </form>
     </div>
   </body>

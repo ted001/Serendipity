@@ -4,9 +4,9 @@ require("dotenv").config();
 
 function MyMongoDB() {
   const myDB = {};
-  const url = "mongodb://localhost:27017" || process.env.DB_URL;
+  const url =
+    "mongodb+srv://akhila39:Akhila123456@cluster0.uceiksf.mongodb.net/test";
   const DB_NAME = "baby-stuff-sharing-db";
-  const COLLECTION_NAME_USER = "users";
 
   myDB.read = async (collectionName, query) => {
     let client;
@@ -59,11 +59,11 @@ function MyMongoDB() {
   };
 
   //User collections - Akhila
-  myDB.auth = async (data) => {
+  myDB.auth = async (collectionName, data) => {
     let client = new MongoClient(url);
     await client.connect();
     let db = client.db(DB_NAME);
-    let usersCol = db.collection(COLLECTION_NAME_USER);
+    let usersCol = db.collection(collectionName);
     console.log(data.email);
     try {
       let res = await usersCol.findOne({ email: data.email });

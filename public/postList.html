@@ -25,21 +25,11 @@
     <div class="bgcolor">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="leftContainer">
-          <a class="navbar-brand" href="/public/index.html"
+          <a class="navbar-brand" href="/"
             ><img src="./images/logo.png" alt="Serendipity Logo"
           /></a>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div id="createPosts"></div>
         <div class="rightContainer">
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
@@ -47,7 +37,7 @@
                 <a class="nav-link" href="./postList.html">Posts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="login" href="./login.html">Sign in</a>
+                <a class="nav-link" id="signin" href="./login.html">Sign In</a>
               </li>
               <li class="nav-item">
                 <a
@@ -80,11 +70,6 @@
       </footer>
     </div>
     <script src="/javascripts/postList.js"></script>
-    <script>
-      let updateSignUp = document.getElementById("signup");
-      console.log(updateSignUp);
-      updateSignUp.innerHTML = `Sign out`;
-      updateSignUp.href = "#";
-    </script>
+    <script src="/javascripts/navBar.js"></script>
   </body>
 </html>

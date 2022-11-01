@@ -13,7 +13,7 @@ const usersRouter = require("./routes/users");
 
 const app = express();
 
-app.use(session({ secret: "abc", cookie: { maxAge: 60000 } }));
+app.use(session({ secret: "abc", cookie: {} }));
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
