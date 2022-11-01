@@ -24,9 +24,7 @@ function CreatePost() {
       console.log("res", res);
       if (res.ok) {
         let json = await res.json();
-        setTimeout(() => {
-          window.location.replace(`/posts/${json.postId}`);
-        }, 2000);
+        window.location.replace(`/posts/${json.postId}`);
       }
     });
   };
