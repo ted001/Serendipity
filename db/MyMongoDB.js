@@ -4,9 +4,8 @@ require("dotenv").config();
 
 function MyMongoDB() {
   const myDB = {};
-  const url = "mongodb://localhost:27017" || process.env.DB_URL;
+  const url = "url";
   const DB_NAME = "baby-stuff-sharing-db";
-  const COLLECTION_NAME_USER = "users";
 
   myDB.read = async (collectionName, query) => {
     let client;
@@ -68,7 +67,7 @@ function MyMongoDB() {
     try {
       let res = await usersCol.findOne({ email: data.email });
       console.log("password", res.password, " data ", data.password);
-      if (res.password === data.password) {
+      if (res?.password === data.password) {
         console.log("authenticated");
         return true;
       }
