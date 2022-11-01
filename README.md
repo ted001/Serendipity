@@ -15,12 +15,13 @@ Landing Page
 ![Landing page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.52.53.png)
 
 Login Page
+![Login page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.53.10.png)
 
 Postlist page
+![Postlist page](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.55.54.png)
 
-create post page
-
-post details page
+Create post page
+![Createpost](https://raw.githubusercontent.com/Akhilasulgante/Serendipity/main/Screenshot%202022-11-01%20at%2011.56.09.png)
 
 To install it clone the repository and run:
 
