@@ -1,6 +1,8 @@
 # Serendipity – A marketplace for baby Hand-me-downs
 Serendipity is a web-app built for a community who wants to share or get baby products.
 
+//Really useful and awesome idea!
+
 
 ## Project Objective
 This project was built for [CS 5610 Web Class](https://johnguerra.co/classes/webDevelopment_fall_2022/)
