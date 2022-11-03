@@ -12,6 +12,7 @@ const pagesRouter = require("./routes/pages");
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
+//Looks like you have dotenv configured, so I'd recommend adding the session secret as an environment variable instead of including it in the code
 app.use(session({ secret: "abc", cookie: {} }));
 app.use(bodyParser.json());
 
