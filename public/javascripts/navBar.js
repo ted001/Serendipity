@@ -9,6 +9,7 @@ async function isUserLogged() {
       updateSignUp.href = "../index.html";
       let updateUserName = document.getElementById("signin");
       updateUserName.innerHTML = `Hi ${name}`;
+      //Really like having the personal touch of greeting the user by their name!
       // Adding the create button for posts
       let createPosts = document.getElementById("createPosts");
       let logout = document.getElementById("logout");
