@@ -67,6 +67,7 @@ function MyMongoDB() {
     try {
       let res = await usersCol.findOne({ email: data.email });
       console.log("password", res.password, " data ", data.password);
+      // Great use of optional chaining! I didn't know you could do that!
       if (res?.password === data.password) {
         console.log("authenticated");
         return true;
