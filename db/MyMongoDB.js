@@ -7,6 +7,9 @@ function MyMongoDB() {
   const url = process.env.DB_URL || "mongodb://localhost:27017";
   const DB_NAME = "baby-stuff-sharing-db";
 
+  // Making these functions collection-agnostic was a good choice! They can be used
+  // like wrappers on the MongoDB functions to work for any collection within the database
+  // so you don't have to rewrite the same code. Very cool!
   myDB.read = async (collectionName, query) => {
     let client;
 
