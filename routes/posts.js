@@ -36,6 +36,9 @@ router.get("/", async (req, res) => {
   res.send(JSON.stringify(data));
 });
 
+// Your handling of the uploads and storage of images is nicely done!
+// I like that you upload the images to a separate location and just store the
+// urls in the database.
 // Create new Post
 router.post("/", upload.array("images"), async (req, res) => {
   let postId = "";
@@ -54,6 +57,7 @@ router.post("/", upload.array("images"), async (req, res) => {
   res.status(statusCode).send(JSON.stringify({ postId: postId.toString() }));
 });
 
+// Great use of url parameters to get the specific post!
 // Get post with id
 router.get("/:id", async (req, res) => {
   let data;

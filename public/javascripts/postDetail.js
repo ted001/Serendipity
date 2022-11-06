@@ -42,17 +42,23 @@ function PostDetails() {
           method: "delete",
         });
 
-        window.location.replace("/posts");
+        window.location.replace("/posts"); // I like that you redirect to posts afterward.
       });
       const user = sessionStorage.getItem("email");
       console.log("user: " + user);
 
+      // I think it's cool that you allow everyone to view the posts, whether or not they're logged in!
+      // It's great that you change what users can do with the posts based on whether or not they're logged in!
       if (user === "null") {
         console.log("user: " + "hidden");
         deleteButton.style.visibility = "hidden";
       } else {
         console.log("user: " + "visible");
-        deleteButton.style.visibility = "visible";
+        // I think it would make sense for only the user who created the post to be able to delete it:
+        if (user === data.userEmail) {
+          deleteButton.style.visibility = "visible";
+        }
+        // deleteButton.style.visibility = "visible";
       }
 
       //Load image

@@ -29,6 +29,11 @@ router.post("/login", async (req, res) => {
 router.post("/signup", async (req, res) => {
   const user = req.body;
   console.log("in routes", user.email);
+  // It would be great to validate that the user.email isn't already in use by another user.
+  // That could be done with a findOne in the database file like you do inside the auth function.
+  // Currently, multiple users can sign up with the same email, but because the auth function
+  // only authenticates the password against the first user found with the email, the later signups
+  // wouldn't be able to log in after signing up.
   if (await databaseManager.insertuser("users", user)) {
     console.log("welcome");
   }
