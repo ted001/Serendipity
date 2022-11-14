@@ -18,6 +18,7 @@ async function isUserLogged() {
       // I'd recommend changing what it links to as well as what it says.
       updateUserName.setAttribute("href", "#");
       updateUserName.innerHTML = `Hi ${name}`;
+      //Really like having the personal touch of greeting the user by their name!
       // Adding the create button for posts
       let createPosts = document.getElementById("createPosts");
       // I didn't see this used elsewhere in this file and I didn't see a logout id in the html
